@@ -1,0 +1,89 @@
+.datatable-crud-demo {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.p-datatable-wrapper {
+    width: 100%;
+}
+
+.p-datatable {
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: #0056b3;
+  }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .datatable-crud-demo {
+        padding: 1rem;
+    }
+
+    .p-datatable {
+        font-size: 0.9rem;
+        width: 100%; 
+        max-width: 100%; 
+        overflow-x: auto; 
+    }
+
+    .p-datatable-wrapper {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .p-datatable table {
+        width: 100%; 
+        table-layout: auto; 
+    }
+}
+
+/* For screens smaller than 769px */
+@media (max-width: 768px) {
+    .datatable-crud-demo {
+        padding: 0.5rem;
+    }
+
+    .p-datatable {
+        font-size: 0.8rem;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .p-datatable-wrapper {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .p-datatable table {
+        width: 100%;
+        table-layout: auto;
+    }
+}

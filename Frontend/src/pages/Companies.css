@@ -1,0 +1,233 @@
+.companies-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff; /* Optional: Page background color */
+}
+
+.companies-page .card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.companies-page .card .manage-companies-header {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.companies-page .card .table-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.companies-page .card .table-header .p-button {
+    margin: 0.5rem 0;
+}
+
+.companies-page .card .p-datatable {
+    width: 100%;
+}
+
+.companies-page .card .p-datatable .p-datatable-header {
+    text-align: center;
+    /* padding: 12px; */
+    padding: 0;
+    background-color: #fff;
+    border: #fff;
+}
+
+.companies-page .card .p-datatable-thead > tr > th,
+.companies-page .card .p-datatable-tbody > tr > td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.companies-page .card .p-datatable-tbody > tr {
+    transition: background-color 0.15s ease-in-out;
+}
+
+.companies-page .card .p-datatable-tbody > tr:hover {
+    background-color: #f0f0f0;
+}
+
+.companies-page .card .p-paginator {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Styles for the search and filter within the header */
+.companies-page .card .table-header .flex-row {
+    display: flex;
+    width: 100%; /* Ensure full width for alignment */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.companies-page .card .table-header .flex-wrap > .p-button {
+    margin-right: 0.5rem;
+}
+
+.companies-page .card .table-header .flex.align-items-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.companies-page .card .table-header .p-input-icon-left {
+    width: auto; /* Adjust as needed */
+}
+
+.companies-page .card .table-header .p-inputtext {
+    width: 100%; /* Make search input take available width */
+    max-width: 500px; /* Limit max width if needed */
+}
+
+.companies-page .card .table-header .p-button.p-button-secondary {
+    margin-left: 0.5rem;
+}
+
+/* Dialog styles */
+.p-dialog {
+    width: 100%;
+    max-width: 450px; /* Adjust as needed */
+}
+
+.p-dialog-header {
+    text-align: center;
+}
+
+.p-dialog .p-field {
+    margin: 1rem 0;
+}
+
+.p-fluid .p-field {
+    width: 100%;
+}
+
+.p-dialog-footer .p-button {
+    width: auto;
+    margin-left: 0.5rem;
+}
+
+.companies-page .card .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.companies-page .card .table-header .header-buttons,
+.companies-page .card .table-header .header-search-filter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.companies-page .card .table-header .header-button {
+    height: 43px; /* Adjust as needed */
+}
+
+@media screen and (max-width: 768px) {
+    .companies-page .card .table-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .companies-page .card .table-header .header-buttons,
+    .companies-page .card .table-header .header-search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .companies-page {
+        padding: 1rem;
+    }
+
+    .companies-page .card {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+
+    .companies-page .card .table-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .companies-page .card .table-header .flex-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .companies-page .card .table-header .flex-wrap > .p-button {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .companies-page .card .table-header .flex.align-items-center {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .companies-page .card .table-header .p-input-icon-left {
+        width: 100%;
+    }
+
+    .companies-page .card .table-header .p-button.p-button-secondary {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .companies-page .card .p-datatable {
+        font-size: 0.9rem;
+    }
+    .companies-page .card .p-datatable-thead > tr > th,
+    .companies-page .card .p-datatable-tbody > tr > td {
+        padding: 0.6rem;
+    }
+
+    .p-dialog {
+        width: 90%;
+        max-width: 90%;
+    }
+    .p-field {
+        margin-bottom: 0.5rem;
+    }
+    .p-fluid .p-field label {
+        font-size: 0.9rem;
+    }
+
+    .p-dialog-footer .p-button {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+}

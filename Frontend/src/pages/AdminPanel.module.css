@@ -1,0 +1,199 @@
+/* AdminPanel.module.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    }
+
+/* Login Form Styles */
+.admin_login_container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+
+.admin_login_container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input_group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input_group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input_group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login_button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.login_button:hover {
+    background-color: #3e8e41;
+}
+
+.error_message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Admin Panel Styles */
+.admin_panel_container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 20px auto;
+    box-sizing: border-box; /* Very important! */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin_panel_container h2 {
+    color: #444950;
+    font-size: 1.75em;
+    margin-bottom: 0.5em;
+}
+
+.logout_button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout_button:hover {
+    background-color: #da190b;
+}
+
+/* User Table Styles */
+.user_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user_table thead {
+    background-color: #444950;
+    color: white;
+    text-align: left;
+}
+
+.user_table th {
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.user_table td {
+    padding: 15px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.user_table tbody tr {
+    background-color: #f5f5f5;
+}
+
+.user_table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.user_table tbody tr:hover {
+    background-color: #eaeaea;
+}
+
+/* Style the checkbox container */
+.user_table td:last-child {
+    text-align: center;
+}
+
+/*Make checkbox bigger*/
+.user_table td input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    .admin_panel_container, .admin_login_container {
+        width: 95%;
+    }
+
+    .user_table thead {
+        display: none;
+    }
+
+    .user_table tbody td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .user_table tbody td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .user_table tbody tr {
+        margin-bottom: 15px;
+        display: block;
+    }
+}
